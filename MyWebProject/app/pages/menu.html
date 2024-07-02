@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu</title>
+	<link rel="stylesheet" href="../styles/global.css">
+</head>
+<body>
+	<div>
+		<h1>
+			Evènements
+		</h1>
+		<button onclick="showCreateForm()">Créer un évènement</button>
+		<button onclick="showDeleteForm()">Supprimer un évènement</button>
+		<fieldset>
+			<div id="createForm">
+				<form id="formulaireEvenementCreation">
+					<input type="text" id="eventName" placeholder="nom"/>
+					<input type="datetime-local" id="eventDate"/>
+					<input type="button" value="Ajouter" onclick="addEvent()"/>
+					<input type="reset" value="Vider"/>
+				</form>
+			</div>
+			<div id="deleteForm">
+				<form id="formulaireEvenementSuppression">
+					<select id="deleteFormSelect">
+					</select>
+					<input type="button" value="Supprimer" onclick="deleteEvent()"/>
+					<input type="reset" value="Vider"/>
+				</form>
+			</div>
+		</fieldset>
+	</div>
+
+	<div>
+		<h1>
+			Participants
+		</h1>
+		<button onclick="showCreateForm2()">Ajouter un participant</button>
+		<button onclick="showDeleteForm2()">Supprimer un participant</button>
+		<fieldset>
+			<div id="createForm2">
+				<form id="formulaireParticipantCreation">
+					<select id="eventsSelect"></select>
+					<input type="text" id="personFName" placeholder="nom"/>
+					<input type="text" id="personLName" placeholder="prénom"/>
+					<input type="button" value="Ajouter" onclick="addPerson()"/>
+					<input type="reset" value="Vider"/>
+				</form>
+			</div>
+			<div id="deleteForm2">
+				<form id="formulaireParticipantSuppression">
+					<select id="deleteFormSelect2">
+					</select>
+					<input type="button" value="Supprimer" onclick="deletePerson()"/>
+					<input type="reset" value="Vider"/>
+				</form>
+			</div>
+		</fieldset>
+		
+		<div>
+			<h2>Liste des évènements et de leurs participants (Recharger pour mettre à jour)</h2>
+			<fieldset>
+				<div id="summary">
+				</div>	
+			</fieldset>
+		</div>
+	</div>
+
+	<script src="../scripts/entites/persistent.js"></script>
+	<script src="../scripts/collections.js"></script>
+	<script src="../scripts/entites/participant.js"></script>
+	<script src="../scripts/entites/evenement.js"></script>
+	<script src="../scripts/visibiliteFormulaires.js"></script>
+	<script src="../scripts/formActions.js"></script>
+</body>
+</html>

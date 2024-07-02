@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mon appli de gestion d'évènements</title>
+	<link rel="stylesheet" href="app/styles/global.css">
+</head>
+<body>
+	
+	<header>
+		<h1 id="app_title">
+		</h1>
+
+		<h2>
+			Bienvenue sur notre plateforme d'évènements!
+		</h2>
+		<ul>
+			<li><a href="app/pages/connexion.html"><button>Se connecter</button></a></li>
+			<li><a href="https://gcenterburkina.com/"><button>Visitez le site de GC</button></a></li>
+		</ul>
+	</header>
+
+	<div>
+		<fieldset color="red">
+			<p>
+				Ici, vous pourrez vous incrire pour participer à un évènement.
+				Cliquez sur  <a href="app/pages/connexion.html">Se connecter</a> pour accéder à la console d'administration!
+			</p>
+		</fieldset>
+	</div>
+
+	<div>
+		<h3>
+			Liste des évènements existants
+		</h3>
+
+		<ul id="app_listeDesEvenements">
+
+		</ul>
+	</div>
+
+	<script src="app/scripts/entites/persistent.js"></script>
+	<script src="app/scripts/constantes.js"></script>
+	<script src="app/scripts/collections.js"></script>
+	<script src="app/scripts/listerEvenements.js"></script>
+	<script src="app/scripts/afficherTitre.js"></script>
+</body>
+</html>

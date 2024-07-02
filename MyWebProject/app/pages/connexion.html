@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Connexion</title>
+	<link rel="stylesheet" href="../styles/global.css">
+</head>
+<body>
+	<div>
+		<div class="form_title">
+			Connexion
+		</div>
+		<div class="form_body">
+			<form>
+				<input type="text" id="userName" placeholder="email"/>
+				<input type="text" id="userPassword" placeholder="mot de passe"/>
+				<input type="button" value="Se connecter" onclick="testerUtilisateur()"/>
+				<input type="reset" value="Vider"/>
+			</form>
+		</div>
+	</div>
+	<script src="../scripts/entites/persistent.js"></script>
+	<script src="../scripts/entites/utilisateur.js"></script>
+	<script src="../scripts/collections.js"></script>
+	<script src="../scripts/utilisateurParDefaut.js"></script>
+	<script src="../scripts/connexionTest.js"></script>
+</body>
+</html>
